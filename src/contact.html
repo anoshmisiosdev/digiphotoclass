@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <a href="../src/index.html" style="position: absolute; top: 10px; left: 10px; text-decoration: none; color: #ffffff; background-color: #000000; padding: 10px 20px; border-radius: 5px; border: 2px solid #ffffff;">Home</a>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        body.hdr {
+            filter: brightness(1.2) contrast(1.2);
+        }
+
+        .contact-container {
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        .contact-container.hdr {
+            filter: brightness(1.5);
+        }
+
+        .contact-container h1 {
+            margin-bottom: 20px;
+        }
+
+        .contact-container a {
+            display: inline-block;
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #007BFF;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .contact-container a.hdr {
+            filter: brightness(1.2);
+        }
+
+        .contact-container a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        window.addEventListener('load', function() {
+            if (window.matchMedia('(dynamic-range: high)').matches) {
+                document.body.classList.add('hdr');
+                document.querySelector('.contact-container').classList.add('hdr');
+                document.querySelectorAll('.contact-container a').forEach(a => a.classList.add('hdr'));
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="contact-container">
+        <h1>Contact Us</h1>
+        <img src="RIYAN2.jpg" alt="Contact Image" style="width: 50%; height: auto; margin-bottom: 20px;">
+        <p>If you have any questions, feel free to reach out to us via email.</p>
+        <a href="mailto:riyananosh@gmail.com">Email Us</a>
+    </div>
+</body>
+<footer>
+    <p>© 2025 Riyan Anosh. All rights reserved.</p>
+</footer>
+</html>

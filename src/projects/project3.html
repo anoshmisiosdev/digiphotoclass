@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            background-image: url('../IMG_3612.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        body.hdr {
+            filter: brightness(1.2) contrast(1.2);
+        }
+
+        header {
+            background: #1e1e1e;
+            color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        header.hdr {
+            filter: brightness(1.5);
+        }
+
+        nav ul {
+            display: flex;
+            font-family: 'Georgia', serif;
+            font-family: 'Times New Roman', Times, serif;
+            align-items: center;
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+            transform: rotate(-10deg);
+            transition: transform 0.3s ease-in-out;
+            position: relative;
+        }
+
+        nav ul li:hover {
+            transform: rotate(0deg);
+        }
+
+        nav ul li a, nav ul li select {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            display: block;
+            padding: 10px;
+            background-color: #000000;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul li a:hover, nav ul li select:hover {
+            background-color: #333333;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: rgb(255, 255, 255);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            outline: white;
+        }
+
+        nav ul li:hover .dropdown-content {
+            display: block;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            flex: 1;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: #1e1e1e;
+            color: #ffffff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer.hdr {
+            filter: brightness(1.5);
+        }
+
+        .img-container img {
+            max-width: 100%;
+            max-height: 100vh;
+            width: auto;
+            height: auto;
+        }
+    </style>
+    <script>
+        window.addEventListener('load', function() {
+            if (window.matchMedia('(dynamic-range: high)').matches) {
+                document.body.classList.add('hdr');
+                document.querySelector('header').classList.add('hdr');
+                document.querySelectorAll('nav a').forEach(a => a.classList.add('hdr'));
+                document.querySelector('footer').classList.add('hdr');
+            }
+        });
+    </script>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>Project 3</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li>
+                    <a href="#">Projects</a>
+                    <div class="dropdown-content">
+                        <a href="portrait.html">Portrait</a>
+                        <a href="project2.html">American and Beauty</a>
+                        <a href="project3.html">World on Fire</a>
+                    </div>
+                </li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="project-content">
+                <h1>World on Fire</h1>
+                <div class="img-container" id="img-container">
+                    <img src="../projects/Photos/RA_FIREAPPLE_122.jpg" alt="World on Fire" style="width: 100%; height: auto;">
+                </div>
+                <Phoyo></Phoyo></img>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Riyan Anosh. All rights reserved.</p>
+    </footer>
+    <script src="../scripts/main.js"></script>
+</body>
+</html>

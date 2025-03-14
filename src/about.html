@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+            background-image: url('IMG_3612.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        body.hdr {
+            filter: brightness(1.2) contrast(1.2);
+        }
+
+        header {
+            background: #1e1e1e;
+            color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        header.hdr {
+            filter: brightness(1.5);
+        }
+
+        nav ul {
+            display: flex;
+            font-family: 'Georgia', serif;
+            font-family: 'Times New Roman', Times, serif;
+            align-items: center;
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+            transform: rotate(-10deg);
+            transition: transform 0.3s ease-in-out;
+            position: relative;
+        }
+
+        nav ul li:hover {
+            transform: rotate(0deg);
+        }
+
+        nav ul li a, nav ul li select {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            display: block;
+            padding: 10px;
+            background-color: #000000;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul li a:hover, nav ul li select:hover {
+            background-color: #333333;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: rgb(255, 255, 255);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            outline: white;
+        }
+
+        nav ul li:hover .dropdown-content {
+            display: block;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            flex: 1;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: #1e1e1e;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <div id="branding">
+        <h1>About Me</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    </header>
+    <div class="container">
+        <div class="content">
+            <h2>Welcome to My Photography Page</h2>
+            <p>Hello! I'm a passionate photographer who loves capturing the beauty of the world through my lens. My journey in photography started a few years ago, and since then, I have been exploring different styles and techniques to improve my craft.</p>
+            <p>On this page, you will find a collection of my favorite photographs, ranging from landscapes to portraits. I hope you enjoy browsing through my work as much as I enjoyed creating it.</p>
+            <p>If you would like to get in touch with me for collaborations or inquiries, please visit the contact page.</p>
+        </div>
+    </div>
+    <footer>
+        <p>© 2025 Riyan Anosh. All rights reserved.</p>
+    </footer>
+</body>
+</html>
